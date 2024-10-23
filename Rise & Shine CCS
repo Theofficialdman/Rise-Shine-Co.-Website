@@ -1,67 +1,191 @@
-/* styles.css */
+/rise-shine-co/
+│
+├── public/
+│   ├── index.html
+│   └── (other static assets)
+│
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   └── ProductList.js
+│   ├── styles/
+│   │   └── style.css
+│   ├── App.js
+│   └── index.js
+│
+├── package.json
+├── README.md
+└── vercel.json
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rise & Shine Co.</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ProductList from './components/ProductList';
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <ProductList />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Neue', cursive; /* A playful font suitable for children */
+    background-color: #f5ebee; /* Soft pastel background */
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f0f4f7;
-    color: #333;
 }
 
+/* Header Styling */
 header {
-    background-color: #5cb85c; /* A gentle, soothing green */
-    color: white;
-    padding: 1rem;
+    background-color: #ff9999; /* Bright, friendly pink */
+    padding: 15px;
     text-align: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation for parents */
 nav ul {
+    list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ffcccc; /* Lighter pink for navigation */
 }
 
 nav ul li {
-    display: inline;
     margin: 0 10px;
 }
 
 nav ul li a {
-    color: white;
+    color: #4a4a4a; /* Dark enough for visibility, friendly for kids */
     text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
+nav ul li a:hover {
+    background-color: #ff9999;
+    color: white;
+}
+
+/* Main Content */
 main {
     padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-section {
-    margin-bottom: 20px;
-    background: white;
-    padding: 20px;
+/* Product List */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-item {
+    border: 1px solid #ff9999;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 10px;
+    width: calc(33% - 20px);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item h3 {
+    color: #ff6666;
+    margin-bottom: 5px;
+}
+
+.product-item p {
+    color: #555;
+}
+
+/* Footer */
 footer {
+    background-color: #ff9999;
+    color: white;
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: white;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
-/* Additions for product section */
-#products a {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 4px;
-    display: inline-block;
-    margin-top: 10px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-item {
+        width: calc(50% - 20px);
+    }
 }
 
-#products a:hover {
-    background-color: #45a049;
+@media (max-width: 480px) {
+    .product-item {
+        width: calc(100% - 20px);
+    }
 }
+
+import React from 'react';
+
+function Header() {
+    return (
+        <header>
+            <h1>Welcome to Rise & Shine Co.</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    );
+}
+
+export default Header;
+
+import React from 'react';
+
+function Footer() {
+    return (
+        <footer>
+            <p>&copy; 2024 Rise & Shine Co. All rights reserved.</p>
+        </footer>
+    );
+}
+
+export default Footer;

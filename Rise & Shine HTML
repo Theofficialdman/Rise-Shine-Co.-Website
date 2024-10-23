@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rise & Shine Co. - Your Parenting Partner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rise & Shine Co.</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Rise & Shine</h2>
+            <p>At Rise & Shine, we believe that every parent deserves the best for their loved ones without compromising on quality or affordability.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Our mission is to transform the journey of parenthood with products that enhance everyday experiences for your family. We aim to be the go-to store on Amazon UK for parents seeking high-quality, affordable parenting products.</p>
+        </section>
+
+        <section id="products">
+            <h2>Our Product Range</h2>
+            <p>From child sleep training devices to baby essentials like diapers, clothing, and feeding supplies, our catalog grows to support you at every stage of parenting. <a href="your-amazon-store-link.com">Explore our products on Amazon</a></p>
+        </section>
+
+        <section id="community">
+            <h2>Join Our Community</h2>
+            <p>Be part of a community where parents share experiences, tips, and support. You're not alone; we're here to help you rise and shine every day.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>Email: stanbridged@aol.com</p>
+            <p>Phone: (+447854837123>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rise & Shine Co. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
